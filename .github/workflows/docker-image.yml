@@ -30,6 +30,8 @@ jobs:
       - name: Checkout code
         # 检出代码，默认会检出整个仓库
         uses: actions/checkout@v3
+        with:
+          repository: 2926295173/NextChatWeb
 
       # 构建 Docker 镜像
       - name: Build Docker image
