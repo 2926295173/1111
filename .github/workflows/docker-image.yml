@@ -36,7 +36,7 @@ jobs:
       # 构建 Docker 镜像
       - name: Build Docker image
         # 根据 Dockerfile 构建镜像，并标记为 latest
-        run: docker build -f Dockerfile . --tag ${{ env.IMAGE_NAME }}:latest
+        run: docker build --platform linux/amd64,linux/arm64 -f Dockerfile . --tag ${{ env.IMAGE_NAME }}:latest
 
       # 登录到 Docker Hub（或其他 Docker 注册表）
       - name: Log in to Docker Hub
